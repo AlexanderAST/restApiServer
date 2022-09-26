@@ -25,7 +25,7 @@ func main() {
 	if err != nil {
 		log.Fatal("Случилась ошибка с конфигом", err)
 	}
-	s := apiserver.New()
+	s := apiserver.New(config)
 	if err := s.Start(); err != nil {
 		log.Fatal(err)
 	}
